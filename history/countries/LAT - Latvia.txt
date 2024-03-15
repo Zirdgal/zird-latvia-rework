@@ -26,6 +26,9 @@ if = {
 
 add_ideas = {
 	limited_conscription
+	limited_exports
+	LV_state_of_war
+	LV_true_leader_idea
 }
 
 create_country_leader = {
@@ -33,7 +36,7 @@ create_country_leader = {
 	desc = POLITICS_ALBERTS_KVIESIS_DESC
 	picture = "portrait_lat_alberts_kviesis.dds"
 	expire = "1936.1.11"
-	idealogy = centrism 
+	ideology = centrism
 	traits = {
 		#
 	}
@@ -122,8 +125,6 @@ set_popularities = {
 	add_command_power = 100
 	
 	remove_ideas = {
-		LAT_perkonkrust_idea
-		democratic_opposition
 	}
 	
 	set_country_flag = fought_perkonkrust_flag
