@@ -3,7 +3,7 @@
 ## happened - checks if achivement happened
 #
 ###########################
-## 1 VERY EASY ACHIEVEMENTS
+## 1 VERY EASY ACHIEVEMENTS (fr)
 #############################
 
 friend_in_need = {
