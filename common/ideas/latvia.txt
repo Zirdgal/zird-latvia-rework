@@ -1,0 +1,107 @@
+ideas = {
+
+	country = {
+
+		LV_state_of_war = {
+
+			picture = LV_state_of_war
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = -0.1
+				army_org_factor = -0.15
+				army_org_regain = -0.2
+				dig_in_speed_factor = -0.2
+				experience_gain_army_unit_factor = -0.25
+				experience_loss_factor = 0.1
+				max_planning_factor = -0.3
+			}
+		}
+
+		LV_true_leader_idea = {
+
+			picture = LV_true_leader
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.25
+				stability_factor = -0.15
+				war_stability_factor = -0.35
+				war_support_factor = -0.05
+			}
+		}
+	}
+
+	aircraft_manufacturer = {
+			
+		designer = yes
+		
+		vef = {
+			picture = generic_air_manufacturer_1
+
+			
+			allowed = {
+				original_tag = LAT
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			equipment_bonus = {
+				# made light bombers, fighters and trainers
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	naval_manufacturer = {
+		
+		designer = yes
+		
+		lkod = {
+			picture = generic_naval_manufacturer_2
+
+			
+			allowed = {
+				original_tag = LAT
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			equipment_bonus = {
+				# mer research
+			}
+			
+			traits = { naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+	}
+}
