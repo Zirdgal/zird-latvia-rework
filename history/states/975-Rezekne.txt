@@ -1,0 +1,19 @@
+state={
+	id=975
+	name="STATE_975"
+	history={
+		owner = LAT
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = LAT
+
+	}
+	provinces={
+		222 341 6459 9275 
+	}
+	manpower=24127
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=rural
+}

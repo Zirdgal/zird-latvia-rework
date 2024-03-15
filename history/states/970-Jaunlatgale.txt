@@ -1,0 +1,21 @@
+state={
+	id=970
+	name="STATE_970"
+	history={
+		owner = LAT
+		victory_points = {
+			319 1 
+		}
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = LAT
+	}
+	provinces={
+		319 3298 
+	}
+	manpower=101057
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=rural
+}

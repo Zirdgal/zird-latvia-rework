@@ -1,0 +1,23 @@
+state={
+	id=989
+	name="STATE_989"
+	history={
+		owner = LAT
+		victory_points = {
+			3296 2
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		add_core_of = LAT
+	}
+	provinces={
+		3296 6322
+	}
+	manpower=32955
+	buildings_max_level_factor=1.000
+	local_supplies=2.000
+	state_category=town
+}

@@ -1,0 +1,18 @@
+state={
+	id=979
+	name="STATE_979"
+	history={
+		owner = EST
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = EST
+	}
+	provinces={
+		592 9485 
+	}
+	manpower=33505
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=rural
+}

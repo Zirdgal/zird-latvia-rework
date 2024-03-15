@@ -1,0 +1,18 @@
+state={
+	id=973
+	name="STATE_973"
+	history={
+		owner = EST
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = EST
+	}
+	provinces={
+		6408 
+	}
+	manpower=12452
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=city
+}

@@ -1,0 +1,19 @@
+state={
+	id=986
+	name="STATE_986"
+
+	history={
+		owner = LIT
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = LIT
+	}
+	provinces={
+		9438 11226 11498 
+	}
+	manpower=130613
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=10.000
+}

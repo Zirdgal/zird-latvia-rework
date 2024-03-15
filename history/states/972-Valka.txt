@@ -1,0 +1,18 @@
+state={
+	id=972
+	name="STATE_972"
+	history={
+		owner = LAT
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = LAT
+	}
+	provinces={
+		3388 
+	}
+	manpower=4573
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=city
+}
