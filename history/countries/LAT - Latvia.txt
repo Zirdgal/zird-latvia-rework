@@ -29,6 +29,7 @@ add_ideas = {
 	limited_exports
 	LV_state_of_war
 	LV_true_leader_idea
+	LV_radical_political_party_ban
 }
 
 create_country_leader = {
