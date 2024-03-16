@@ -12,7 +12,7 @@ state={
 		add_core_of = LAT
 	}
 	provinces={
-		319 3298 
+		319 
 	}
 	manpower=101057
 	buildings_max_level_factor=1.000
