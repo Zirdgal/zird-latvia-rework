@@ -194,7 +194,7 @@ focus_tree = {
 	focus = {
 		id = LV_open_the_underground_soviet_network
 		icon = GFX_
-		mutually_exclusive = { focus = LV_plan_the_break_out_of_celmins }
+		mutually_exclusive = { focus = LV_arm_the_remaining_ugunskrusts_members }
 		prerequisite = { focus = LV_radicalise_the_state_of_war }
 		relative_position_id =  LV_radicalise_the_state_of_war
 		x = -1
@@ -228,7 +228,7 @@ focus_tree = {
 
 
 	focus = {
-		id = LV_plan_the_break_out_of_celmins
+		id = LV_arm_the_remaining_ugunskrusts_members
 		icon = GFX_
 		mutually_exclusive = { focus = LV_open_the_underground_soviet_network }
 		prerequisite = { focus = LV_radicalise_the_state_of_war }

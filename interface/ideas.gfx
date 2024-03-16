@@ -2,6 +2,8 @@ spriteTypes = {
 
 	### ZIRD CUSTOM IDEAS
 
+
+
 	spriteType = {
 		name = "GFX_idea_LV_true_leader"
 		texturefile = "gfx/interface/ideas/idea_LV_true_leader.dds"
@@ -11,6 +13,7 @@ spriteTypes = {
 		name = "GFX_idea_LV_state_of_war"
 		texturefile = "gfx/interface/ideas/idea_LV_state_of_war.dds"
 	}
+
 
 
 

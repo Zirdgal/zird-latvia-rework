@@ -32,6 +32,11 @@ add_ideas = {
 	LV_radical_political_party_ban
 }
 
+add_opinion_modifier = {
+	target = POL
+	modifier = LV_our_only_ally_modifier
+}
+
 create_country_leader = {
 	name = "Alberts Kviesis"
 	desc = POLITICS_ALBERTS_KVIESIS_DESC
