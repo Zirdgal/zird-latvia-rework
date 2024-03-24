@@ -194,10 +194,39 @@ focus_tree = {
 	focus = {
 		id = LV_open_the_underground_soviet_network
 		icon = GFX_
-		mutually_exclusive = { focus = LV_arm_the_remaining_ugunskrusts_members }
+		mutually_exclusive = { focus = LV_return_of_the_national_union }
 		prerequisite = { focus = LV_radicalise_the_state_of_war }
 		relative_position_id =  LV_radicalise_the_state_of_war
 		x = -1
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = LV_arm_the_remaining_radical_cells
+		icon = GFX_
+		#mutually_exclusive = { focus = LV_open_the_underground_soviet_network }
+		prerequisite = { focus = LV_open_the_underground_soviet_network focus = LV_return_of_the_national_union }
+		relative_position_id =  LV_open_the_underground_soviet_network
+		x = 3
 		y = 1
 
 		cost = 10
@@ -228,7 +257,7 @@ focus_tree = {
 
 
 	focus = {
-		id = LV_arm_the_remaining_ugunskrusts_members
+		id = LV_return_of_the_national_union
 		icon = GFX_
 		mutually_exclusive = { focus = LV_open_the_underground_soviet_network }
 		prerequisite = { focus = LV_radicalise_the_state_of_war }
