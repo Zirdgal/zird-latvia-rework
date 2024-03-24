@@ -19,7 +19,7 @@ focus_tree = {
 	
 
 	default = no
-
+	reset_on_civilwar = no
 	continuous_focus_position = { x = 20 y = 5000 }
 
 #	focus = {
@@ -129,6 +129,12 @@ focus_tree = {
 
 
 
+#░█████╗░██╗██╗░░░██╗██╗██╗░░░░░  ░██╗░░░░░░░██╗░█████╗░██████╗░
+#██╔══██╗██║██║░░░██║██║██║░░░░░  ░██║░░██╗░░██║██╔══██╗██╔══██╗
+#██║░░╚═╝██║╚██╗░██╔╝██║██║░░░░░  ░╚██╗████╗██╔╝███████║██████╔╝
+#██║░░██╗██║░╚████╔╝░██║██║░░░░░  ░░████╔═████║░██╔══██║██╔══██╗
+#╚█████╔╝██║░░╚██╔╝░░██║███████╗  ░░╚██╔╝░╚██╔╝░██║░░██║██║░░██║
+#░╚════╝░╚═╝░░░╚═╝░░░╚═╝╚══════╝  ░░░╚═╝░░░╚═╝░░╚═╝░░╚═╝╚═╝░░╚═╝
 
 
 
@@ -168,7 +174,7 @@ focus_tree = {
 		#mutually_exclusive = { focus =  }
 		prerequisite = { focus = LV_remember_1934 }
 		relative_position_id =  LV_remember_1934
-		x = 2
+		x = 3
 		y = 1
 
 		cost = 10
@@ -191,6 +197,10 @@ focus_tree = {
 		completion_reward = {
 		}
 	}
+
+
+
+
 	focus = {
 		id = LV_open_the_underground_soviet_network
 		icon = GFX_
@@ -226,7 +236,278 @@ focus_tree = {
 		#mutually_exclusive = { focus = LV_open_the_underground_soviet_network }
 		prerequisite = { focus = LV_open_the_underground_soviet_network focus = LV_return_of_the_national_union }
 		relative_position_id =  LV_open_the_underground_soviet_network
+		x = 8
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = LV_construct_a_secondary_soviet_railway_line
+		icon = GFX_
+		#mutually_exclusive = { focus = LV_open_the_underground_soviet_network }
+		prerequisite = { focus = LV_open_the_underground_soviet_network }
+		relative_position_id =  LV_open_the_underground_soviet_network
+		x = 2
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = LV_abrene_for_support
+		icon = GFX_
+		mutually_exclusive = { focus = LV_our_own_kind_of_communism }
+		prerequisite = { focus = LV_construct_a_secondary_soviet_railway_line }
+		relative_position_id =  LV_construct_a_secondary_soviet_railway_line
+		x = -2
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = LV_appoint_soviet_military_staff
+		icon = GFX_
+		#mutually_exclusive = { focus = LV_our_own_kind_of_communism }
+		prerequisite = { focus = LV_abrene_for_support }
+		relative_position_id =  LV_abrene_for_support
+		x = 1
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = LV_soviet_volunteer_forces
+		icon = GFX_
+		#mutually_exclusive = { focus = LV_our_own_kind_of_communism }
+		prerequisite = { focus = LV_abrene_for_support }
+		relative_position_id =  LV_abrene_for_support
+		x = -1
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = LV_hire_soviet_paramilitaries
+		icon = GFX_
+		#mutually_exclusive = { focus = LV_our_own_kind_of_communism }
+		prerequisite = { focus = LV_abrene_for_support }
+		relative_position_id =  LV_abrene_for_support
+		x = -3
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+
+
+
+
+
+
+
+
+	focus = {
+		id = LV_our_own_kind_of_communism
+		icon = GFX_
+		mutually_exclusive = { focus = LV_abrene_for_support }
+		prerequisite = { focus = LV_construct_a_secondary_soviet_railway_line }
+		relative_position_id =  LV_construct_a_secondary_soviet_railway_line
+		x = 2
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = LV_secure_latgalian_support
+		icon = GFX_
+		#mutually_exclusive = { focus = LV_abrene_for_support }
+		prerequisite = { focus = LV_our_own_kind_of_communism }
+		relative_position_id =  LV_our_own_kind_of_communism
+		x = 1
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = LV_concessions_to_religious_figures
+		icon = GFX_
+		#mutually_exclusive = { focus = LV_abrene_for_support }
+		prerequisite = { focus = LV_our_own_kind_of_communism }
+		relative_position_id =  LV_our_own_kind_of_communism
 		x = 3
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = LV_raid_the_daugavpils_fort
+		icon = GFX_
+		#mutually_exclusive = { focus = LV_abrene_for_support }
+		prerequisite = { focus = LV_our_own_kind_of_communism }
+		relative_position_id =  LV_our_own_kind_of_communism
+		x = -1
 		y = 1
 
 		cost = 10
@@ -262,8 +543,373 @@ focus_tree = {
 		mutually_exclusive = { focus = LV_open_the_underground_soviet_network }
 		prerequisite = { focus = LV_radicalise_the_state_of_war }
 		relative_position_id =  LV_radicalise_the_state_of_war
-		x = 4
+		x = 10
 		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = LV_return_of_the_pagans
+		icon = GFX_
+		mutually_exclusive = { focus = LV_creation_of_fascist_propoganda }
+		prerequisite = { focus = LV_return_of_the_national_union }
+		relative_position_id =  LV_return_of_the_national_union
+		x = 1
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = LV_rekindle_monarchist_sentiment
+		icon = GFX_
+		#mutually_exclusive = { focus = LV_creation_of_fascist_propoganda }
+		prerequisite = { focus = LV_return_of_the_pagans }
+		relative_position_id =  LV_return_of_the_pagans
+		x = -2	
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = LV_grant_rights_to_swedish_minorities
+		icon = GFX_
+		#mutually_exclusive = { focus = LV_creation_of_fascist_propoganda }
+		prerequisite = { focus = LV_rekindle_monarchist_sentiment }
+		relative_position_id =  LV_rekindle_monarchist_sentiment
+		x = 1
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = LV_fortify_the_castle
+		icon = GFX_
+		#mutually_exclusive = { focus = LV_creation_of_fascist_propoganda }
+		prerequisite = { focus = LV_rekindle_monarchist_sentiment }
+		relative_position_id =  LV_rekindle_monarchist_sentiment
+		x = -1
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+	focus = {
+		id = LV_unify_agaisnt_the_common_enemy
+		icon = GFX_
+		#mutually_exclusive = { focus = LV_creation_of_fascist_propoganda }
+		prerequisite = { focus = LV_return_of_the_pagans focus = LV_creation_of_fascist_propoganda }
+		relative_position_id =  LV_return_of_the_pagans
+		x = 2
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = LV_negotiate_king_gustav_support
+		icon = GFX_
+		#mutually_exclusive = { focus = LV_creation_of_fascist_propoganda }
+		prerequisite = { focus = LV_unify_agaisnt_the_common_enemy }
+		prerequisite = { focus = LV_rekindle_monarchist_sentiment }
+		relative_position_id =  LV_unify_agaisnt_the_common_enemy
+		x = -1
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+
+	focus = {
+		id = LV_creation_of_fascist_propoganda
+		icon = GFX_
+		mutually_exclusive = { focus = LV_return_of_the_pagans }
+		prerequisite = { focus = LV_return_of_the_national_union }
+		relative_position_id =  LV_return_of_the_national_union
+		x = 5
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = LV_celmins_breakout_plan
+		icon = GFX_
+		#mutually_exclusive = { focus = LV_open_the_underground_soviet_network }
+		prerequisite = { focus = LV_creation_of_fascist_propoganda }
+		relative_position_id =  LV_creation_of_fascist_propoganda
+		x = 2
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = LV_promise_german_landownership
+		icon = GFX_
+		#mutually_exclusive = { focus = LV_open_the_underground_soviet_network }
+		prerequisite = { focus = LV_celmins_breakout_plan }
+		relative_position_id = LV_celmins_breakout_plan
+		x = -1
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = LV_german_supply_convoys
+		icon = GFX_
+		#mutually_exclusive = { focus = LV_open_the_underground_soviet_network }
+		prerequisite = { focus = LV_celmins_breakout_plan }
+		relative_position_id = LV_celmins_breakout_plan
+		x = 1
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = LV_negotiate_adolf_support
+		icon = GFX_
+		#mutually_exclusive = { focus = LV_creation_of_fascist_propoganda }
+		prerequisite = { focus = LV_unify_agaisnt_the_common_enemy }
+		prerequisite = { focus = LV_celmins_breakout_plan }
+		relative_position_id =  LV_unify_agaisnt_the_common_enemy
+		x = 1
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+
+	focus = {
+		id = LV_ignition
+		icon = GFX_
+		#mutually_exclusive = { focus = LV_open_the_underground_soviet_network }
+		prerequisite = { focus = LV_arm_the_remaining_radical_cells }
+		prerequisite = { focus = LV_hire_soviet_paramilitaries focus = LV_soviet_volunteer_forces focus = LV_appoint_soviet_military_staff focus = LV_raid_the_daugavpils_fort focus = LV_secure_latgalian_support focus = LV_concessions_to_religious_figures focus = LV_fortify_the_castle focus = LV_grant_rights_to_swedish_minorities focus = LV_negotiate_adolf_support focus = LV_negotiate_king_gustav_support focus = LV_promise_german_landownership focus = LV_german_supply_convoys }
+		relative_position_id =  LV_arm_the_remaining_radical_cells
+		x = 0
+		y = 3
 
 		cost = 10
 

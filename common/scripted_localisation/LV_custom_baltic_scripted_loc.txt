@@ -1,0 +1,18 @@
+defined_text = {
+	name = GetRadicalistFocusName
+	text = {
+		trigger = {
+			has_completed_focus = LV_open_the_underground_soviet_network
+		}
+		localization_key = LV_radicalist_focus_name_communist
+	}
+	text = {
+		trigger = {
+			has_completed_focus = LV_return_of_the_national_union
+		}
+		localization_key = LV_radicalist_focus_name_fascist
+	}
+	text = { 
+		localization_key = LV_radicalist_focus_name_default
+	}
+}

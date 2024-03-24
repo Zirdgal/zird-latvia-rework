@@ -1,0 +1,8 @@
+﻿l_english:
+ LV_arm_the_remaining_radical_cells:0 "[Root.GetRadicalistFocusName]"
+ LV_arm_the_remaining_radical_cells_desc:0 " "
+ LV_radicalist_focus_name_communist:0 "Arm the remaining communist cells"
+ LV_radicalist_focus_name_fascist:0 "Arm the remaining fascist cells"
+ LV_radicalist_focus_name_default:0 "Arm the remaining radical cells"
+
+ LV_ignition:0 "§RIgnition§!"
