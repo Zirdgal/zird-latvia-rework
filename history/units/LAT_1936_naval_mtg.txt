@@ -1,0 +1,23 @@
+﻿units = {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Latvijas Jūras Spēki"			
+		naval_base = 9340 # Riga
+		task_force = {
+			name = "Latvijas Kara Flote"
+			location =  9340 # Riga
+			ship = { name = "Ronis" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = LAT version_name = "Ronis Class" } } }
+			ship = { name = "Spīdola" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = LAT version_name = "Ronis Class" } } }
+			ship = { name = "Varonis" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = LAT version_name = "Viesturis Class" } } }
+		}
+		task_force = {
+			name = "Latvijas Kara Flote"
+			location =  9262 # Liepāja
+			ship = { name = "Virsaitis" start_experience_factor = 0.1 definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = LAT version_name = "M1916 Type" } } }
+			ship = { name = "Viesturis" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = LAT version_name = "Viesturis Class" } } }
+			ship = { name = "Imanta" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = LAT version_name = "Viesturis Class" } } }
+		}
+	}
+}
+
