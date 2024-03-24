@@ -141,7 +141,7 @@ focus_tree = {
 
 	focus = {
 		id = LV_remember_1934
-		icon = GFX_
+		icon = GFX_focus_LV_remember_1934
 		mutually_exclusive = { focus = LV_suspend_the_constitution }
 		prerequisite = { focus = LV_rejoin_the_railways }
 		relative_position_id =  LV_rejoin_the_railways
