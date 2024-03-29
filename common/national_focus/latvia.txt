@@ -316,6 +316,9 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			SOV = {
+				transfer_state = 970
+			}
 		}
 	}
 	focus = {
