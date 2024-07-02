@@ -1,4 +1,25 @@
 ﻿l_english:
+
+ LV_rejoin_the_railways:0 "Rejoin the Railways!"
+ LV_rejoin_the_railways_desc:0 "Nothing yet!"
+
+
+ LV_remember_1934:0 "Remember 1934..."
+ LV_remember_1934_desc:0 "Nothing yet!"
+
+
+ LV_radicalise_the_state_of_war:0 "Radicalise the State of War"
+ LV_radicalise_the_state_of_war_desc:0 "Nothing yet!"
+
+ LV_open_the_underground_soviet_network:0 "Open the Underground Soviet Network"
+ LV_open_the_underground_soviet_network_desc:0 "Nothing yet!"
+
+ LV_construct_a_secondary_soviet_railway_line:0 "Construct a Secondary Soviet Railway Line"
+ LV_construct_a_secondary_soviet_railway_line_desc:0 "Nothing yet!"
+
+ LV_abrene_for_support:0 "Abrene for Support"
+ LV_abrene_for_support_desc:0 "Nothing yet!"
+
  LV_arm_the_remaining_radical_cells:0 "[Root.GetRadicalistFocusName]"
  LV_arm_the_remaining_radical_cells_desc:0 " "
  LV_radicalist_focus_name_communist:0 "Arm the remaining communist cells"

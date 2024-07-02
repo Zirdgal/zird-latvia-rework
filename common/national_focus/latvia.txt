@@ -148,7 +148,7 @@ focus_tree = {
 		x = 3
 		y = 1
 
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 1
@@ -166,18 +166,22 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			swap_ideas = { 
+                remove_idea = LV_true_leader_idea
+                add_idea = LV_true_leader_idea_2
+            }
 		}
 	}
 	focus = {
 		id = LV_radicalise_the_state_of_war
-		icon = GFX_
+		icon = GFX_focus_LV_radicalise_the_state_of_war
 		#mutually_exclusive = { focus =  }
 		prerequisite = { focus = LV_remember_1934 }
 		relative_position_id =  LV_remember_1934
 		x = 3
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -195,6 +199,10 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			swap_ideas = { 
+                remove_idea = LV_state_of_war
+                add_idea = LV_state_of_war_2
+            }
 		}
 	}
 
@@ -203,14 +211,14 @@ focus_tree = {
 
 	focus = {
 		id = LV_open_the_underground_soviet_network
-		icon = GFX_
+		icon = GFX_focus_LV_open_the_underground_soviet_network
 		mutually_exclusive = { focus = LV_return_of_the_national_union }
 		prerequisite = { focus = LV_radicalise_the_state_of_war }
 		relative_position_id =  LV_radicalise_the_state_of_war
 		x = -1
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -228,6 +236,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			add_ideas = LV_underground_soviet_network
 		}
 	}
 	focus = {
@@ -261,14 +270,14 @@ focus_tree = {
 	}
 	focus = {
 		id = LV_construct_a_secondary_soviet_railway_line
-		icon = GFX_
+		icon = GFX_focus_generic_railroad
 		#mutually_exclusive = { focus = LV_open_the_underground_soviet_network }
 		prerequisite = { focus = LV_open_the_underground_soviet_network }
 		relative_position_id =  LV_open_the_underground_soviet_network
 		x = 2
 		y = 1
 
-		cost = 10
+		cost = 9
 
 		ai_will_do = {
 			factor = 1
@@ -286,19 +295,44 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			build_railway = { # From Abrene to Petseri
+				level = 2
+				build_only_on_allied = no
+				path = { 3298 319 415 }
+				start_province = 3298
+				target_province = 415	
+			}
+			build_railway = { # Upgrade Latgalian Railway
+				level = 1
+				build_only_on_allied = yes
+				path = { 7482 11222 3298 }
+				start_province = 7482
+				target_province = 3298	
+			}
+			970 = {
+    			add_building_construction = {
+					type = supply_node
+					province = 319
+					level = 1
+    			}
+			}
+			add_popularity = {
+                ideology = communism
+                popularity = 0.025
+           }
 		}
 	}
 
 	focus = {
 		id = LV_abrene_for_support
-		icon = GFX_
+		icon = GFX_goal_generic_forceful_treaty
 		mutually_exclusive = { focus = LV_our_own_kind_of_communism }
 		prerequisite = { focus = LV_construct_a_secondary_soviet_railway_line }
 		relative_position_id =  LV_construct_a_secondary_soviet_railway_line
 		x = -2
 		y = 1
 
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 1
@@ -322,7 +356,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = LV_appoint_soviet_military_staff
+		id = LV_purchase_soviet_equipment
 		icon = GFX_
 		#mutually_exclusive = { focus = LV_our_own_kind_of_communism }
 		prerequisite = { focus = LV_abrene_for_support }
@@ -337,6 +371,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = { has_completed_focus = LV_ignition }
 		}
 
 		bypass = {
@@ -352,7 +387,7 @@ focus_tree = {
 	}
 	focus = {
 		id = LV_soviet_volunteer_forces
-		icon = GFX_
+		icon = GFX_focus_generic_manpower
 		#mutually_exclusive = { focus = LV_our_own_kind_of_communism }
 		prerequisite = { focus = LV_abrene_for_support }
 		relative_position_id =  LV_abrene_for_support
@@ -366,6 +401,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = { has_completed_focus = LV_ignition }
 		}
 
 		bypass = {
@@ -377,10 +413,16 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			every_owned_state = {
+     			limit = {
+     				is_core_of = ROOT
+     			}
+     			add_manpower = 250000
+     		}
 		}
 	}
 	focus = {
-		id = LV_hire_soviet_paramilitaries
+		id = LV_appoint_soviet_military_staff
 		icon = GFX_
 		#mutually_exclusive = { focus = LV_our_own_kind_of_communism }
 		prerequisite = { focus = LV_abrene_for_support }
@@ -395,6 +437,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = { has_completed_focus = LV_ignition }
 		}
 
 		bypass = {
@@ -406,6 +449,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+
 		}
 	}
 
@@ -426,7 +470,7 @@ focus_tree = {
 		x = 2
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -462,6 +506,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = { has_completed_focus = LV_ignition }
 		}
 
 		bypass = {
@@ -491,6 +536,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = { has_completed_focus = LV_ignition }
 		}
 
 		bypass = {
@@ -520,6 +566,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = { has_completed_focus = LV_ignition }
 		}
 
 		bypass = {
@@ -614,6 +661,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = { has_completed_focus = LV_ignition }
 		}
 
 		bypass = {
@@ -643,6 +691,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = { has_completed_focus = LV_ignition }
 		}
 
 		bypass = {
@@ -672,6 +721,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = { has_completed_focus = LV_ignition }
 		}
 
 		bypass = {
@@ -711,6 +761,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = { has_completed_focus = LV_ignition }
 		}
 
 		bypass = {
@@ -741,6 +792,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = { has_completed_focus = LV_ignition }
 		}
 
 		bypass = {
@@ -801,6 +853,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = { has_completed_focus = LV_ignition }
 		}
 
 		bypass = {
@@ -830,6 +883,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = { has_completed_focus = LV_ignition }
 		}
 
 		bypass = {
@@ -859,6 +913,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = { has_completed_focus = LV_ignition }
 		}
 
 		bypass = {
@@ -889,6 +944,7 @@ focus_tree = {
 		}
 
 		available = {
+			NOT = { has_completed_focus = LV_ignition }
 		}
 
 		bypass = {
@@ -909,7 +965,7 @@ focus_tree = {
 		icon = GFX_
 		#mutually_exclusive = { focus = LV_open_the_underground_soviet_network }
 		prerequisite = { focus = LV_arm_the_remaining_radical_cells }
-		prerequisite = { focus = LV_hire_soviet_paramilitaries focus = LV_soviet_volunteer_forces focus = LV_appoint_soviet_military_staff focus = LV_raid_the_daugavpils_fort focus = LV_secure_latgalian_support focus = LV_concessions_to_religious_figures focus = LV_fortify_the_castle focus = LV_grant_rights_to_swedish_minorities focus = LV_negotiate_adolf_support focus = LV_negotiate_king_gustav_support focus = LV_promise_german_landownership focus = LV_german_supply_convoys }
+		prerequisite = { focus = LV_purchase_soviet_equipment focus = LV_soviet_volunteer_forces focus = LV_appoint_soviet_military_staff focus = LV_raid_the_daugavpils_fort focus = LV_secure_latgalian_support focus = LV_concessions_to_religious_figures focus = LV_fortify_the_castle focus = LV_grant_rights_to_swedish_minorities focus = LV_negotiate_adolf_support focus = LV_negotiate_king_gustav_support focus = LV_promise_german_landownership focus = LV_german_supply_convoys }
 		relative_position_id =  LV_arm_the_remaining_radical_cells
 		x = 0
 		y = 3

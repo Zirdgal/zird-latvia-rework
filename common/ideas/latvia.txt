@@ -21,13 +21,37 @@ ideas = {
 				war_support_factor = -0.1
 				army_org_factor = -0.15
 				army_org_regain = -0.2
-				dig_in_speed_factor = -0.2
-				experience_gain_army_unit_factor = -0.25
-				experience_loss_factor = 0.1
 				max_planning_factor = -0.3
 				conscription_factor = -0.2
 				army_attack_factor = 0.15
 				army_defence_factor = 0.15
+			}
+		}
+		LV_state_of_war_2 = {
+
+			picture = LV_state_of_war
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.05
+				army_org_factor = -0.1
+				army_org_regain = -0.25
+				max_planning_factor = -0.2
+				conscription_factor = -0.1
+				army_attack_factor = 0.12
+				army_defence_factor = 0.12
+				communism_drift = 0.02
+				fascism_drift = 0.02
 			}
 		}
 
@@ -46,13 +70,35 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				political_power_factor = -0.2
+				political_power_factor = -0.15
 				stability_factor = -0.05
-				command_power_gain_mult = -0.2
+				command_power_gain_mult = -0.15
 				war_support_factor = -0.05
 				political_advisor_cost_factor = 0.33
 			}
 		}
+		LV_true_leader_idea_2 = {
+
+			picture = LV_true_leader
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.10
+				stability_factor = -0.07
+				command_power_gain_mult = -0.10
+				war_support_factor = -0.07
+				political_advisor_cost_factor = 0.22
+			}
+		} 
 		LV_radical_political_party_ban = {
 
 			picture = generic_democracy_banned
@@ -70,16 +116,69 @@ ideas = {
 			modifier = {
 				stability_factor = -0.1
 				political_power_factor = 0.1	
-				drift_defence_factor = 0.5
-				communism_drift = -0.01
-				fascism_drift = -0.01
-				democratic_drift = -0.01
-				communism_acceptance = -50
-				fascism_acceptance = -50
-				democratic_acceptance = -50
+				drift_defence_factor = 0.25
+				communism_drift = -0.03
+				fascism_drift = -0.03
+				democratic_drift = -0.02
+			}
+		}
+
+		LV_underground_soviet_network = {
+
+			picture = generic_spy_intel
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.1
+				operative_slot = 1
+				communism_drift = 0.05
+				communism_acceptance = 50
 			}
 		}
 	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	aircraft_manufacturer = {
 			

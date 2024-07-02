@@ -7,6 +7,15 @@ spriteTypes = {
 	texturefile = "gfx/interface/goals/focus_LV_remember_1934.dds"			
 	}	
 
+	SpriteType = {
+	name = "GFX_focus_LV_radicalise_the_state_of_war"
+	texturefile = "gfx/interface/goals/focus_LV_radicalise_the_state_of_war.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_LV_open_the_underground_soviet_network"
+	texturefile = "gfx/interface/goals/focus_LV_open_the_underground_soviet_network.dds"			
+	}	
+
 	#### Generic continuous goal icons
 
 	SpriteType = {
