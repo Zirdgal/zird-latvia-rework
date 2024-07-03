@@ -350,6 +350,10 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			add_popularity = {
+                ideology = communism
+                popularity = 0.03
+           }
 			SOV = {
 				transfer_state = 970
 			}
@@ -364,7 +368,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -383,6 +387,10 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			add_popularity = {
+                ideology = communism
+                popularity = 0.025
+            }
 		}
 	}
 	focus = {
@@ -394,7 +402,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		cost = 10
+		cost = 7
 
 		ai_will_do = {
 			factor = 1
@@ -413,6 +421,10 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			add_popularity = {
+                ideology = communism
+                popularity = 0.025
+            }
 			every_owned_state = {
      			limit = {
      				is_core_of = ROOT
@@ -423,14 +435,14 @@ focus_tree = {
 	}
 	focus = {
 		id = LV_appoint_soviet_military_staff
-		icon = GFX_
+		icon = GFX_focus_generic_military_academy
 		#mutually_exclusive = { focus = LV_our_own_kind_of_communism }
 		prerequisite = { focus = LV_abrene_for_support }
 		relative_position_id =  LV_abrene_for_support
 		x = -3
 		y = 1
 
-		cost = 10
+		cost = 4
 
 		ai_will_do = {
 			factor = 1
@@ -449,7 +461,30 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
+			add_popularity = {
+                ideology = communism
+                popularity = 0.025
+           }
+			create_corps_commander = {
+				name = "Martin Latsis"
+				gfx = GFX_portrait_LAT_martin_latsis
+				traits = { JAP_communist_sympathizer infantry_officer }
+				attack_skill = 3
+				defense_skill = 4
+				planning_skill = 3
+				logistics_skill = 3
+				skill = 3
+			}
+			create_corps_commander = {
+				name = "Jukums Vācietis"
+				gfx = GFX_portrait_LAT_jukums_vacietis
+				traits = { JAP_communist_sympathizer war_hero }
+				attack_skill = 4
+				defense_skill = 4
+				planning_skill = 3
+				logistics_skill = 3
+				skill = 3
+			}
 		}
 	}
 
@@ -988,6 +1023,147 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+		    start_civil_war = {
+    			ruling_party = communism
+    			ideology = neutrality
+    			size = 1
+			}
+			random_country = {
+    			limit = {
+    				original_tag = ROOT
+    				has_war_with = ROOT
+    			}
+    			division_template = { 
+    				name = "Forest Brothers"
+    				division_names_group = LAT_INF_01
+    				is_locked = yes
+    				regiments = { 
+    					infantry = { x = 0 y = 0 }
+    					infantry = { x = 1 y = 0 }
+    					infantry = { x = 2 y = 0 }
+    					infantry = { x = 3 y = 0 }
+    
+    					infantry = { x = 0 y = 1 }
+    					infantry = { x = 1 y = 1 }
+    					infantry = { x = 2 y = 1 }
+    					infantry = { x = 3 y = 1 }
+    
+    					infantry = { x = 0 y = 2 }
+    					infantry = { x = 1 y = 2 }
+    					infantry = { x = 2 y = 2 }
+    					infantry = { x = 3 y = 2 }
+    				}
+    				support = {
+    				}
+    			}
+    			random_owned_controlled_state = {
+    				hidden_effect = {
+    					create_unit = { 
+    						division = "name = \"1. Forest Brothers\" division_template = \"Forest Brothers\" start_experience_factor = 0.5" 
+    						owner = ROOT
+    					}
+    					create_unit = { 
+    						division = "name = \"2. Forest Brothers\" division_template = \"Forest Brothers\" start_experience_factor = 0.5" 
+    						owner = ROOT
+    					}
+    					create_unit = { 
+    						division = "name = \"3. Forest Brothers\" division_template = \"Forest Brothers\" start_experience_factor = 0.5" 
+    						owner = ROOT
+    					}
+    					create_unit = { 
+    						division = "name = \"4. Forest Brothers\" division_template = \"Forest Brothers\" start_experience_factor = 0.5" 
+    						owner = ROOT
+    					}
+    					create_unit = { 
+    						division = "name = \"5. Forest Brothers\" division_template = \"Forest Brothers\" start_experience_factor = 0.5" 
+    						owner = ROOT
+    					}
+    				}
+    			}
+    		}
+			if = {
+    			limit = {
+    				has_completed_focus = LV_abrene_for_support
+    			}
+    			if = { 
+    				limit = {
+    					SOU = { has_government = communism } 
+    				}
+    				SOU = {
+    					set_autonomy = {
+    						target=PREV
+    						autonomy_state = autonomy_puppet 
+    						freedom_level=0.5 
+    						end_civil_wars = no
+    					}
+    				}
+    			}
+    		}
+			if = {
+    			limit = {
+    				has_completed_focus = LV_soviet_volunteer_forces
+    			}
+    			division_template = { 
+    				name = "Soviet Volunteers"
+    				division_names_group = SOV_INF_01
+    				is_locked = yes
+    				regiments = { 
+    					infantry = { x = 0 y = 0 }
+    					infantry = { x = 1 y = 0 }
+    					infantry = { x = 2 y = 0 }
+    					infantry = { x = 3 y = 0 }
+    
+    					infantry = { x = 0 y = 1 }
+    					infantry = { x = 1 y = 1 }
+    					infantry = { x = 2 y = 1 }
+    					infantry = { x = 3 y = 1 }
+    
+    					infantry = { x = 0 y = 2 }
+    					infantry = { x = 1 y = 2 }
+    					infantry = { x = 2 y = 2 }
+    					infantry = { x = 3 y = 2 }
+    				}
+    				support = {
+    					recon = { x = 0 y = 0 }
+    					engineer = { x = 0 y = 1 }
+    					artillery = { x = 0 y = 2 }
+    				}
+    			}
+    			random_owned_controlled_state = {
+    				hidden_effect = {
+    					create_unit = { 
+    						division = "name = \"1. Soviet Volunteers\" division_template = \"Soviet Volunteers\" start_experience_factor = 0.5" 
+    						owner = ROOT
+    					}
+    					create_unit = { 
+    						division = "name = \"2. Soviet Volunteers\" division_template = \"Soviet Volunteers\" start_experience_factor = 0.5" 
+    						owner = ROOT
+    					}
+    					create_unit = { 
+    						division = "name = \"3. Soviet Volunteers\" division_template = \"Soviet Volunteers\" start_experience_factor = 0.5" 
+    						owner = ROOT
+    					}
+    					create_unit = { 
+    						division = "name = \"4. Soviet Volunteers\" division_template = \"Soviet Volunteers\" start_experience_factor = 0.5" 
+    						owner = ROOT
+    					}
+    					create_unit = { 
+    						division = "name = \"5. Soviet Volunteers\" division_template = \"Soviet Volunteers\" start_experience_factor = 0.5" 
+    						owner = ROOT
+    					}
+    				}
+    			}
+    		}
+			if = {
+    			limit = {
+    				has_completed_focus = BALTIC_soviet_equipment
+    			}
+    			add_equipment_to_stockpile = {
+    				type = infantry_equipment
+    				amount = 2750
+    				producer = SOU
+    			}
+    		}
 		}
 	}
 }
